@@ -1,5 +1,4 @@
-def song():
-    song = """There was an old lady who swallowed a fly.
+There was an old lady who swallowed a fly.
 I don't know why she swallowed a fly - perhaps she'll die!
 
 There was an old lady who swallowed a spider;
@@ -38,9 +37,4 @@ She swallowed the spider to catch the fly;
 I don't know why she swallowed a fly - perhaps she'll die!
 
 There was an old lady who swallowed a horse...
-...She's dead, of course!"""
-
-    print(song)
-
-def main():
-    song()
+...She's dead, of course!
