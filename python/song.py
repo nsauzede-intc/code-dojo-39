@@ -39,7 +39,7 @@ She swallowed the spider to catch the fly;
 I don't know why she swallowed a fly - perhaps she'll die!
 
 {_INIT_PHRASE} horse...
-...She's dead, of course!"""
+{_END_PHRASE}"""
     else:
         song = ""
 
@@ -61,9 +61,10 @@ I don't know why she swallowed a {animal} - perhaps she'll die!
 
 def _get_last_paragraph(animal):
     return f"""{_INIT_PHRASE} {animal}...
-...She's dead, of course!"""
+{_END_PHRASE}"""
 
 _INIT_PHRASE = "There was an old lady who swallowed a"
+_END_PHRASE = "...She's dead, of course!"
 
 def main():
     print(song())
