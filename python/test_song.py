@@ -3,6 +3,9 @@ import song
 def test_song():
     assert song.song() == _EXPECTED_DEFAULT_SONG
 
+def test_None_animals():
+    assert song.song(None) == _EXPECTED_DEFAULT_SONG
+
 def test_empty_list_of_animals():
     assert song.song([]) == ""
 
