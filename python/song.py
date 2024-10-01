@@ -1,5 +1,6 @@
-def song():
-    return """There was an old lady who swallowed a fly.
+def song(animals = None):
+    if animals == None:
+        return """There was an old lady who swallowed a fly.
 I don't know why she swallowed a fly - perhaps she'll die!
 
 There was an old lady who swallowed a spider;
@@ -39,6 +40,8 @@ I don't know why she swallowed a fly - perhaps she'll die!
 
 There was an old lady who swallowed a horse...
 ...She's dead, of course!"""
+    else:
+        return ""
 
 def main():
     print(song())

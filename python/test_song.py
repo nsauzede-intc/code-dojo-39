@@ -3,6 +3,9 @@ import song
 def test_song():
     assert song.song() == _EXPECTED_DEFAULT_SONG
 
+def test_empty_list_of_animals():
+    assert song.song([]) == ""
+
 _EXPECTED_DEFAULT_SONG = """There was an old lady who swallowed a fly.
 I don't know why she swallowed a fly - perhaps she'll die!
 
