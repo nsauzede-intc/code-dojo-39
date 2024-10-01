@@ -7,7 +7,7 @@ def test_None_animals():
     assert song.song(None) == _EXPECTED_DEFAULT_SONG
 
 def test_one_animal():
-    assert song.song(["Joltik"]) == """There was an old lady who swallowed a Joltik...
+    assert song.song(["Wailord"]) == """There was an old lady who swallowed a Wailord...
 ...She's dead, of course!"""
 
 def test_one_different_animal():
