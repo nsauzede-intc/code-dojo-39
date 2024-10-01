@@ -33,6 +33,18 @@ I don't know why she swallowed a 4 - perhaps she'll die!
 There was an old lady who swallowed a 6...
 ...She's dead, of course!"""
 
+def WIPtest_four_animal():
+    assert song.song(["3", "4", "5", "6"]) == """There was an old lady who swallowed a 4.
+I don't know why she swallowed a 4 - perhaps she'll die!
+
+There was an old lady who swallowed a 5;
+That wriggled and wiggled and tickled inside her.
+She swallowed the 5 to catch the 4;
+I don't know why she swallowed a 4 - perhaps she'll die!
+
+There was an old lady who swallowed a 6...
+...She's dead, of course!"""
+
 def test_empty_list_of_animals():
     assert song.song([]) == ""
 
