@@ -4,7 +4,7 @@ def song(animals = None):
 {_get_recurrent_question("fly")}
 
 {_INIT_PHRASE} spider;
-That wriggled and wiggled and tickled inside her.
+{_WIGGLE_PHRASE}
 She swallowed the spider to catch the fly;
 {_get_recurrent_question("fly")}
 
@@ -66,7 +66,7 @@ def _get_first_paragraph(animal):
 
 def _get_middle_paragraph(previous_animal, animal):
     return f"""{_INIT_PHRASE} {animal};
-That wriggled and wiggled and tickled inside her.
+{_WIGGLE_PHRASE}
 She swallowed the {animal} to catch the {previous_animal};
 {_get_recurrent_question(previous_animal)}
 
@@ -80,6 +80,7 @@ def _get_recurrent_question(animal):
     return f"I don't know why she swallowed a {animal} - perhaps she'll die!"
 
 _INIT_PHRASE = "There was an old lady who swallowed a"
+_WIGGLE_PHRASE = "That wriggled and wiggled and tickled inside her."
 _END_PHRASE = "...She's dead, of course!"
 
 def main():
