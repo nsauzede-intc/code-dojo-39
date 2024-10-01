@@ -14,6 +14,13 @@ def test_one_different_animal():
     assert song.song(["Foo"]) == """There was an old lady who swallowed a Foo...
 ...She's dead, of course!"""
 
+def test_two_animal():
+    assert song.song(["Gyarados", "Wailord"]) == """There was an old lady who swallowed a Gyarados.
+I don't know why she swallowed a Gyarados - perhaps she'll die!
+
+There was an old lady who swallowed a Wailord...
+...She's dead, of course!"""
+
 def test_empty_list_of_animals():
     assert song.song([]) == ""
 
