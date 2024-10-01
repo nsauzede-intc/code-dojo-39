@@ -41,7 +41,11 @@ I don't know why she swallowed a fly - perhaps she'll die!
 There was an old lady who swallowed a horse...
 ...She's dead, of course!"""
     else:
-        return ""
+        if len(animals)>0:
+            return f"""There was an old lady who swallowed a {animals[0]}...
+...She's dead, of course!"""
+        else:
+            return ""
 
 def main():
     print(song())
