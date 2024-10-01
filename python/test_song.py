@@ -1,5 +1,9 @@
-def song():
-    return """There was an old lady who swallowed a fly.
+import song
+
+def test_song():
+    assert song.song() == _EXPECTED_DEFAULT_SONG
+
+_EXPECTED_DEFAULT_SONG = """There was an old lady who swallowed a fly.
 I don't know why she swallowed a fly - perhaps she'll die!
 
 There was an old lady who swallowed a spider;
@@ -39,6 +43,3 @@ I don't know why she swallowed a fly - perhaps she'll die!
 
 There was an old lady who swallowed a horse...
 ...She's dead, of course!"""
-
-def main():
-    print(song())
