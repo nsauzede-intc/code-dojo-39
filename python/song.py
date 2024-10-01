@@ -1,27 +1,27 @@
 def song(animals = None):
     if animals == None:
-        return """There was an old lady who swallowed a fly.
+        return f"""{_INIT_PHRASE} fly.
 I don't know why she swallowed a fly - perhaps she'll die!
 
-There was an old lady who swallowed a spider;
+{_INIT_PHRASE} spider;
 That wriggled and wiggled and tickled inside her.
 She swallowed the spider to catch the fly;
 I don't know why she swallowed a fly - perhaps she'll die!
 
-There was an old lady who swallowed a bird;
+{_INIT_PHRASE} bird;
 How absurd to swallow a bird.
 She swallowed the bird to catch the spider,
 She swallowed the spider to catch the fly;
 I don't know why she swallowed a fly - perhaps she'll die!
 
-There was an old lady who swallowed a cat;
+{_INIT_PHRASE} cat;
 Fancy that to swallow a cat!
 She swallowed the cat to catch the bird,
 She swallowed the bird to catch the spider,
 She swallowed the spider to catch the fly;
 I don't know why she swallowed a fly - perhaps she'll die!
 
-There was an old lady who swallowed a dog;
+{_INIT_PHRASE} dog;
 What a hog, to swallow a dog!
 She swallowed the dog to catch the cat,
 She swallowed the cat to catch the bird,
@@ -29,7 +29,7 @@ She swallowed the bird to catch the spider,
 She swallowed the spider to catch the fly;
 I don't know why she swallowed a fly - perhaps she'll die!
 
-There was an old lady who swallowed a cow;
+{_INIT_PHRASE} cow;
 I don't know how she swallowed a cow!
 She swallowed the cow to catch the dog,
 She swallowed the dog to catch the cat,
@@ -38,7 +38,7 @@ She swallowed the bird to catch the spider,
 She swallowed the spider to catch the fly;
 I don't know why she swallowed a fly - perhaps she'll die!
 
-There was an old lady who swallowed a horse...
+{_INIT_PHRASE} horse...
 ...She's dead, of course!"""
     else:
         song = ""
@@ -54,14 +54,16 @@ There was an old lady who swallowed a horse...
         return song
 
 def _get_first_paragraph(animal):
-    return f"""There was an old lady who swallowed a {animal}.
+    return f"""{_INIT_PHRASE} {animal}.
 I don't know why she swallowed a {animal} - perhaps she'll die!
 
 """
 
 def _get_last_paragraph(animal):
-    return f"""There was an old lady who swallowed a {animal}...
+    return f"""{_INIT_PHRASE} {animal}...
 ...She's dead, of course!"""
+
+_INIT_PHRASE = "There was an old lady who swallowed a"
 
 def main():
     print(song())
