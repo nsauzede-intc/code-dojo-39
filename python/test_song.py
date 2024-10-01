@@ -7,7 +7,7 @@ def test_None_animals():
     assert song.song(None) == _EXPECTED_DEFAULT_SONG
 
 def test_one_animal():
-    assert song.song(["Wailord"]) == """There was an old lady who swallowed a Wailord...
+    assert song.song(["6"]) == """There was an old lady who swallowed a 6...
 ...She's dead, of course!"""
 
 def test_one_different_animal():
@@ -15,22 +15,22 @@ def test_one_different_animal():
 ...She's dead, of course!"""
 
 def test_two_animal():
-    assert song.song(["Gyarados", "Wailord"]) == """There was an old lady who swallowed a Gyarados.
-I don't know why she swallowed a Gyarados - perhaps she'll die!
+    assert song.song(["5", "6"]) == """There was an old lady who swallowed a 5.
+I don't know why she swallowed a 5 - perhaps she'll die!
 
-There was an old lady who swallowed a Wailord...
+There was an old lady who swallowed a 6...
 ...She's dead, of course!"""
 
 def test_three_animal():
-    assert song.song(["Charizard", "Gyarados", "Wailord"]) == """There was an old lady who swallowed a Charizard.
-I don't know why she swallowed a Charizard - perhaps she'll die!
+    assert song.song(["4", "5", "6"]) == """There was an old lady who swallowed a 4.
+I don't know why she swallowed a 4 - perhaps she'll die!
 
-There was an old lady who swallowed a Gyarados;
+There was an old lady who swallowed a 5;
 That wriggled and wiggled and tickled inside her.
-She swallowed the Gyarados to catch the Charizard;
-I don't know why she swallowed a Charizard - perhaps she'll die!
+She swallowed the 5 to catch the 4;
+I don't know why she swallowed a 4 - perhaps she'll die!
 
-There was an old lady who swallowed a Wailord...
+There was an old lady who swallowed a 6...
 ...She's dead, of course!"""
 
 def test_empty_list_of_animals():
