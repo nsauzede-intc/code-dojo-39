@@ -21,6 +21,18 @@ I don't know why she swallowed a Gyarados - perhaps she'll die!
 There was an old lady who swallowed a Wailord...
 ...She's dead, of course!"""
 
+def test_three_animal():
+    assert song.song(["Charizard", "Gyarados", "Wailord"]) == """There was an old lady who swallowed a Charizard.
+I don't know why she swallowed a Charizard - perhaps she'll die!
+
+There was an old lady who swallowed a Gyarados;
+That wriggled and wiggled and tickled inside her.
+She swallowed the Gyarados to catch the Charizard;
+I don't know why she swallowed a Charizard - perhaps she'll die!
+
+There was an old lady who swallowed a Wailord...
+...She's dead, of course!"""
+
 def test_empty_list_of_animals():
     assert song.song([]) == ""
 

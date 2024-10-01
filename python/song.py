@@ -49,6 +49,11 @@ She swallowed the spider to catch the fly;
         if(len(animals) > 1):
             song += _get_first_paragraph(animals[0])
 
+        previous_animal = animals[0]
+        for animal in animals[1:-1]:
+            song += _get_middle_paragraph(previous_animal, animal)
+            previous_animal = animal
+
         song += _get_last_paragraph(animals[-1])
 
         return song
@@ -56,6 +61,14 @@ She swallowed the spider to catch the fly;
 def _get_first_paragraph(animal):
     return f"""{_INIT_PHRASE} {animal}.
 {_get_recurrent_question(animal)}
+
+"""
+
+def _get_middle_paragraph(previous_animal, animal):
+    return f"""{_INIT_PHRASE} {animal};
+That wriggled and wiggled and tickled inside her.
+She swallowed the {animal} to catch the {previous_animal};
+{_get_recurrent_question(previous_animal)}
 
 """
 
